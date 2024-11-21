@@ -52,3 +52,8 @@ Este é um projeto frontend simplificado desenvolvido em **Angular** para uma ha
 - O projeto pode ser expandido com integração de backend e funcionalidades adicionais.
 - Este é um exemplo de frontend e não está vinculado a um banco de dados real ou APIs externas.
 
+## Observações
+
+- Print do Home da aplicação.
+
+![Home](src/assets/images/prints/home.png)

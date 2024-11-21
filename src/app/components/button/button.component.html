@@ -1,0 +1,5 @@
+<!-- Botão com classe dinâmica e evento de clique -->
+<button [ngClass]="buttonType" (click)="onClick()">
+  <!-- Permite inserir conteúdo dinâmico dentro do botão de acordo com o tipo (primario, secundario ...) -->
+  <ng-content></ng-content>
+</button>

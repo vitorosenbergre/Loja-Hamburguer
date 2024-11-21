@@ -1,0 +1,69 @@
+/* location.component.css */
+
+/* Estilo para o contêiner principal do componente */
+.location-container {
+  width: 100%;  /* Define a largura total do contêiner */
+  padding: 20px;  /* Adiciona espaçamento interno de 20px */
+  background-color: #f9f9f9;  /* Define a cor de fundo do contêiner */
+}
+
+/* Estilo para o conteúdo do local */
+.location-content {
+  max-width: 1200px;  /* Limita a largura máxima do conteúdo para 1200px */
+  margin: 0 auto;  /* Centraliza o conteúdo horizontalmente */
+  padding: 20px;  /* Adiciona espaçamento interno de 20px */
+  background-color: #fff;  /* Define o fundo branco para o conteúdo */
+  border-radius: 8px;  /* Bordas arredondadas de 8px */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra suave ao redor do conteúdo */
+}
+
+/* Estilo para os títulos h1 dentro do .location-content */
+.location-content h1 {
+  font-size: 32px;  /* Tamanho da fonte para o título */
+  color: #521D16;  /* Cor da fonte */
+  text-align: center;  /* Alinha o texto ao centro */
+  margin-bottom: 20px;  /* Adiciona margem abaixo do título */
+  margin-top: 30px;  /* Adiciona margem acima do título */
+}
+
+/* Estilo para os títulos h2 dentro do .location-content */
+.location-content h2 {
+  font-size: 32px;  /* Tamanho da fonte para o título */
+  color: #521D16;  /* Cor da fonte */
+  text-align: center;  /* Alinha o texto ao centro */
+  margin-bottom: 20px;  /* Adiciona margem abaixo do título */
+}
+
+/* Estilo para o parágrafo dentro do .location-content */
+.location-content p {
+  font-size: 18px;  /* Tamanho da fonte para o parágrafo */
+  color: #000;  /* Cor da fonte */
+  text-align: center;  /* Alinha o texto ao centro */
+  margin-bottom: 30px;  /* Adiciona margem abaixo do parágrafo */
+  margin-top: 30px;  /* Adiciona margem acima do parágrafo */
+}
+
+/* Estilo para a mensagem localizada dentro do .location-message */
+.location-message {
+  margin: 20px 0;  /* Adiciona margem de 20px acima e abaixo da mensagem */
+}
+
+/* Estilo para o título h2 dentro de .location-message */
+.location-message h2 {
+  font-size: 24px;  /* Tamanho da fonte para o título */
+  color: #521D16;  /* Cor da fonte */
+}
+
+/* Estilo para o parágrafo dentro de .location-message */
+.location-message p {
+  font-size: 18px;  /* Tamanho da fonte para o parágrafo */
+  color: #000;  /* Cor da fonte */
+  text-align: center;  /* Alinha o texto ao centro */
+}
+
+/* Estilo para o mapa */
+.map {
+  display: flex;  /* Usa o modelo de layout flexbox */
+  justify-content: center;  /* Alinha o conteúdo ao centro */
+  margin-top: 30px;  /* Adiciona margem acima do mapa */
+}

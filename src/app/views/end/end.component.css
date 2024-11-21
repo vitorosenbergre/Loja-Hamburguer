@@ -1,0 +1,67 @@
+/* Estilo do container principal */
+.end-container {
+  display: flex; /* Utiliza o layout flexbox */
+  justify-content: center; /* Alinha os itens horizontalmente ao centro */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  min-height: 80vh; /* Garante que o container tenha no mínimo 80% da altura da tela */
+  font-family: 'Inter', sans-serif; /* Define a fonte Inter para o texto */
+}
+
+/* Estilo do conteúdo final dentro do container */
+.end-content {
+  text-align: center; /* Alinha o texto ao centro */
+  padding: 40px; /* Espaçamento interno de 40px */
+  background: white; /* Cor de fundo branca */
+  border-radius: 15px; /* Bordas arredondadas */
+  border: 2px solid #ED1B00; /* Borda de 2px com cor vermelha */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave para dar destaque */
+  max-width: 400px; /* Largura máxima de 400px */
+  width: 100%; /* A largura ocupa 100% do espaço disponível, mas respeita o limite máximo */
+}
+
+/* Estilo do ícone de checkmark */
+.icon-checkmark {
+  font-size: 3rem; /* Tamanho do ícone aumentado */
+  color: #4caf50; /* Cor verde para o ícone */
+  margin-bottom: 20px; /* Espaço abaixo do ícone */
+}
+
+/* Estilo do título dentro do conteúdo final */
+.end-content h1 {
+  font-size: 2.5rem; /* Tamanho grande para o título */
+  color: #333333; /* Cor de texto escura */
+  margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo dos parágrafos dentro do conteúdo final */
+.end-content p {
+  font-size: 1.2rem; /* Tamanho do texto um pouco maior que o normal */
+  color: #555555; /* Cor de texto cinza claro */
+  margin-bottom: 20px; /* Espaçamento abaixo do parágrafo */
+  line-height: 1.5; /* Altura da linha para facilitar a leitura */
+}
+
+/* Estilo do botão de voltar */
+.back-button {
+  display: inline-block; /* Torna o botão um bloco inline */
+  padding: 12px 24px; /* Padding interno (12px de altura e 24px de largura) */
+  font-size: 1rem; /* Tamanho de fonte médio */
+  font-weight: 500; /* Peso da fonte para um toque mais forte */
+  color: white; /* Cor do texto branca */
+  background: #ED1B00; /* Cor de fundo vermelha */
+  text-decoration: none; /* Remove o sublinhado de links */
+  border-radius: 30px; /* Bordas arredondadas no botão */
+  transition: background 0.3s ease, transform 0.2s ease; /* Transições suaves para o fundo e transformações */
+}
+
+/* Estilo do botão quando o mouse passa por cima (hover) */
+.back-button:hover {
+  background: #d00000; /* Altera a cor do fundo para um vermelho mais escuro */
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão */
+}
+
+/* Estilo do botão quando ele é pressionado (active) */
+.back-button:active {
+  background: #b30000; /* Cor do fundo fica mais escura quando pressionado */
+  transform: scale(0.95); /* Diminui ligeiramente o tamanho do botão */
+}

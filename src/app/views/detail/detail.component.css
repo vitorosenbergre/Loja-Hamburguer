@@ -1,0 +1,141 @@
+/* Container principal para os detalhes do produto */
+.detail-container {
+  display: grid; /* Usando grid layout para o layout responsivo */
+  grid-template-columns: 1fr 1fr; /* Duas colunas de largura igual */
+  gap: 15px; /* Espaço entre as colunas */
+  padding: 20px; /* Espaçamento interno no container */
+  max-width: 1200px; /* Largura máxima do container */
+  margin: 20px auto; /* Margem superior e inferior de 20px, centralizando horizontalmente */
+  grid-template-rows: auto 1fr; /* Duas linhas, uma para o conteúdo e uma para o botão */
+}
+
+/* Estilo para o título do menu */
+.menu-title {
+  font-size: 45px; /* Tamanho grande para o título */
+  color: #ED0000; /* Cor vermelha */
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 10px; /* Espaço abaixo do título */
+  font-weight: bold; /* Negrito para destacar o título */
+  padding: 0px; /* Sem padding lateral */
+}
+
+/* Estilo para a imagem do produto */
+.product-image img {
+  width: 250px; /* Largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 5px; /* Menos espaço entre a imagem e o texto */
+}
+
+/* Estilo para a seção de detalhes do produto */
+.product-details {
+  display: flex; /* Layout flexível */
+  flex-direction: column; /* Organiza os itens em coluna */
+  justify-content: flex-start; /* Alinha os itens no topo */
+  padding: 15px; /* Espaçamento interno */
+  font-family: 'Inter', sans-serif; /* Fonte Inter */
+  color: #000; /* Cor preta para o texto */
+}
+
+/* Estilo para a descrição do produto */
+.product-details .description {
+  font-size: 1rem; /* Tamanho de fonte médio */
+  margin-bottom: 10px; /* Menos espaço abaixo da descrição */
+}
+
+/* Estilo para o container do botão de compra */
+.buy-button-container {
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centraliza o botão horizontalmente */
+  margin-top: 10px; /* Menos espaço acima do botão */
+}
+
+/* Estilo para o card esquerdo */
+.card-left {
+  display: flex; /* Layout flexível */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Alinha os itens ao centro */
+  justify-content: flex-start; /* Alinha os itens no topo */
+  padding: 15px; /* Espaçamento interno */
+  width: 250px; /* Largura do card */
+  max-width: 90%; /* Largura máxima de 90% */
+  height: 380px; /* Altura fixa do card */
+  margin: 0 auto; /* Centraliza o card */
+}
+
+/* Estilo para as imagens no card esquerdo */
+.card-left img {
+  width: 250px; /* Largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 5px; /* Espaço reduzido entre imagem e texto */
+}
+
+/* Estilo para o título do produto no card esquerdo */
+.burger-title {
+  font-size: 1.5rem; /* Tamanho do título do produto */
+  font-weight: bold; /* Negrito para o título */
+  margin-bottom: 3px; /* Menor margem entre título e descrição */
+  color: #521D16; /* Cor marrom */
+}
+
+/* Estilo para a descrição do produto no card esquerdo */
+.burger-description {
+  font-size: 1rem; /* Tamanho da fonte */
+  margin-bottom: 20px; /* Menor margem entre descrição e preço */
+  margin-left: 15px; /* Margem à esquerda */
+}
+
+/* Estilo para o preço no card esquerdo */
+.burger-price {
+  font-size: 36px; /* Tamanho do preço ajustado */
+  font-weight: bold; /* Negrito para o preço */
+  color: #521D16; /* Cor marrom */
+  margin-top: 3px; /* Menor margem acima do preço */
+}
+
+/* Estilo para o card direito com borda */
+.card-right {
+  border: 1px solid #A5A4A4; /* Borda cinza claro */
+  padding: 15px; /* Espaçamento interno */
+  margin-top: 40px; /* Espaço acima do card */
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #f9f9f9; /* Cor de fundo clara */
+  width: 100%; /* Largura total do card */
+  height: 320px; /* Altura do card */
+  max-height: 320px; /* Altura máxima do card */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo de largura/altura */
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do card */
+}
+
+/* Estilo para o texto dentro do card direito */
+.card-right p {
+  font-size: 1rem; /* Tamanho de fonte padrão */
+  color: #333; /* Cor do texto */
+  line-height: 1.5; /* Distância entre linhas */
+}
+
+/* Estilo para o primeiro parágrafo dentro do card direito (título "DESCRIÇÃO") */
+.card-right p:first-child {
+  text-align: center; /* Centraliza o texto */
+  font-weight: bold; /* Negrito para o título */
+  margin-bottom: 18px; /* Espaço abaixo do título */
+  color: #000; /* Cor preta */
+  font-family: 'Inter', sans-serif; /* Fonte Inter */
+  font-size: 24px; /* Tamanho grande para o título */
+}
+
+/* Estilo para o último parágrafo dentro do card direito (descrição do produto) */
+.card-right p:last-of-type {
+  color: #000; /* Cor preta */
+  font-size: 1rem; /* Tamanho de fonte ajustado */
+  text-align: justify; /* Justifica o texto para uma melhor aparência */
+  margin: 10px; /* Margem ao redor da descrição */
+}
+
+/* Container do botão de compra */
+.buy-button-container {
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centraliza o botão horizontalmente */
+  align-items: center; /* Garante que o botão esteja centralizado verticalmente */
+  grid-column: 1 / span 2; /* Faz o botão ocupar as duas colunas do grid */
+  width: 100%; /* Largura total do container */
+}

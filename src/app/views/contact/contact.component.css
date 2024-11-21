@@ -1,0 +1,100 @@
+/* Container geral do formulário de contato */
+.contact-form {
+  display: flex;  /* Define o layout flexível */
+  flex-direction: column;  /* Organiza os elementos do formulário em uma coluna */
+  align-items: center;  /* Centraliza os itens ao longo do eixo transversal (horizontal) */
+  gap: 20px;  /* Espaçamento entre os elementos dentro do formulário */
+  width: 400px;  /* Largura do formulário */
+  margin: 50px auto;  /* Centraliza o formulário na página com espaçamento superior e inferior */
+  padding: 25px;  /* Espaçamento interno do formulário */
+  background-color: #fff;  /* Cor de fundo do formulário */
+  border-radius: 10px;  /* Cantos arredondados do formulário */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra sutil para dar profundidade ao formulário */
+}
+
+/* Título do formulário */
+.contact-form h2 {
+  font-size: 28px;  /* Tamanho da fonte */
+  font-weight: bold;  /* Deixa o título em negrito */
+  color: #521D16;  /* Cor do título */
+  text-align: center;  /* Alinha o título ao centro */
+  margin-bottom: 20px;  /* Espaçamento inferior entre o título e os campos do formulário */
+}
+
+button {
+  margin-left: 150px;  /* Alinha o botão à direita com um espaçamento à esquerda */
+}
+
+/* Estilo dos labels */
+label {
+  font-size: 16px;  /* Tamanho da fonte dos labels */
+  font-weight: 600;  /* Deixa os labels em negrito */
+  color: #521D16;  /* Cor do texto dos labels */
+  margin-bottom: 5px;  /* Espaçamento inferior entre o label e o campo */
+  padding-left: 10px;  /* Espaçamento à esquerda do texto do label */
+}
+
+/* Estilo dos inputs e textarea */
+input, textarea {
+  width: 100%;  /* Os campos de entrada ocupam 100% da largura do seu container */
+  padding: 12px;  /* Espaçamento interno dos campos */
+  border: 1px solid #ddd;  /* Borda sutil de cor cinza claro */
+  border-radius: 5px;  /* Cantos arredondados dos campos */
+  font-size: 16px;  /* Tamanho da fonte dos campos */
+  color: #333;  /* Cor do texto nos campos */
+  background-color: #fff;  /* Cor de fundo dos campos */
+  transition: border 0.3s ease;  /* Transição suave para a borda ao focar */
+  margin-bottom: 15px;  /* Espaçamento inferior entre os campos */
+  max-width: 375px;  /* Tamanho máximo dos campos de input */
+}
+
+/* Efeito ao focar nos inputs e textarea */
+input:focus, textarea:focus {
+  border-color: #ED1B00;  /* Altera a cor da borda para um tom vermelho */
+  outline: none;  /* Remove o contorno padrão */
+}
+
+/* Estilo do botão */
+button {
+  padding: 12px 25px;  /* Espaçamento interno do botão */
+  background-color: #ED1B00;  /* Cor de fundo do botão */
+  color: white;  /* Cor do texto no botão */
+  border: none;  /* Remove a borda padrão */
+  border-radius: 5px;  /* Cantos arredondados no botão */
+  cursor: pointer;  /* Cursor de ponteiro ao passar o mouse sobre o botão */
+  font-size: 18px;  /* Tamanho da fonte do texto no botão */
+  font-weight: 600;  /* Deixa o texto do botão em negrito */
+  transition: background-color 0.3s ease;  /* Transição suave para a cor de fundo ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+  background-color: #ED1B00;  /* Altera a cor de fundo do botão quando o mouse passa sobre ele */
+}
+
+/* Estilo da mensagem de feedback */
+.feedback-message {
+  width: 100%;  /* A mensagem de feedback ocupa toda a largura do seu container */
+  padding: 15px;  /* Espaçamento interno da mensagem */
+  font-size: 16px;  /* Tamanho da fonte */
+  font-weight: 600;  /* Deixa o texto em negrito */
+  border-radius: 5px;  /* Cantos arredondados da mensagem */
+  text-align: center;  /* Alinha o texto da mensagem ao centro */
+  transition: background-color 0.3s ease;  /* Transição suave para a cor de fundo da mensagem */
+}
+
+.feedback-message p {
+  margin: 0;  /* Remove a margem padrão do parágrafo */
+}
+
+/* Estilo para a mensagem de sucesso */
+.feedback-message.success {
+  background-color: #4caf50;  /* Cor de fundo verde para sucesso */
+  color: #fff;  /* Cor do texto branca */
+}
+
+/* Estilo para a mensagem de erro */
+.feedback-message.error {
+  background-color: #ED1B00;  /* Cor de fundo vermelha para erro */
+  color: #fff;  /* Cor do texto branca */
+}

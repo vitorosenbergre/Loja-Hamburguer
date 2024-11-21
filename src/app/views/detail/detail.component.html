@@ -1,0 +1,44 @@
+<!-- Componente de cabeçalho -->
+<app-header></app-header>
+
+<!-- Verifica se burgerDetails existe. Caso exista, exibe os detalhes do produto, caso contrário, exibe a mensagem "notFound" -->
+<div *ngIf="burgerDetails; else notFound">
+  <!-- Título principal da página -->
+  <h1 class="menu-title">DETALHES</h1>
+
+  <!-- Container para os detalhes do burger -->
+  <div class="detail-container">
+    <!-- Card esquerdo: Exibe a imagem do burger e suas informações básicas -->
+    <div class="card-left">
+        <!-- A imagem do burger é carregada dinamicamente a partir do objeto burgerDetails -->
+        <img [src]="burgerDetails.image" alt="{{ burgerDetails.title }}" />
+        <!-- Exibe o título do burger -->
+        <p class="burger-title">{{ burgerDetails.title }}</p>
+        <!-- Exibe uma breve descrição do burger -->
+        <p class="burger-description">{{ burgerDetails.description }}</p>
+        <!-- Exibe o preço do burger -->
+        <p class="burger-price">{{ burgerDetails.price + ' R$'}}</p>
+    </div>
+    
+    <!-- Card direito: Exibe a descrição completa do burger -->
+    <div class="card-right">
+      <!-- Título da seção de descrição -->
+      <p> Descrição</p>
+      <!-- Exibe a descrição completa do burger -->
+      <p> {{ burgerDetails.descriptionfull }}</p>
+    </div>
+
+    <!-- Container para o botão de compra -->
+    <div class="buy-button-container">
+        <!-- Componente do botão de compra. O tipo de botão é passado como "quarter" e ao ser clicado, chama a função goToProductPage() -->
+        <app-button [buttonType]="'quarter'" (click)="goToProductPage()" class="primary">COMPRAR</app-button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Template alternativo caso burgerDetails não esteja disponível -->
+<ng-template #notFound>
+  <!-- Mensagem exibida quando não há detalhes para o hambúrguer -->
+  <p class="not-found">Nenhum detalhe encontrado para este hambúrguer.</p>
+</ng-template>

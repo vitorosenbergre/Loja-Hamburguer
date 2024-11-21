@@ -1,0 +1,62 @@
+/* Estilo para o contêiner principal do menu */
+.menu-container {
+  display: grid; /* Utiliza grid layout para organizar os cards do menu */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cria colunas que se adaptam ao tamanho mínimo de 250px */
+  gap: 50px; /* Define o espaço entre os cards */
+  padding: 20px 200px; /* Adiciona padding lateral de 20px de cada lado */
+  justify-content: center; /* Centraliza os cards na tela */
+  max-width: 1200px; /* Define o tamanho máximo do contêiner */
+  margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+}
+
+/* Estilo específico para os cards dentro do menu */
+.menu-container app-card {
+  margin: 0; /* Remove margens automáticas nos cards */
+  padding: 0; /* Remove padding interno nos cards */
+  width: 100%; /* Garante que o card ocupe todo o espaço da coluna */
+  background-color: #ffffff; /* Define a cor de fundo dos cards como branca */
+}
+
+/* Estilo do título do menu */
+.menu-title {
+  font-size: 45px; /* Define um tamanho grande para o título */
+  color: #ED0000; /* Define a cor vermelha para o título */
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 40px; /* Espaço abaixo do título */
+  font-weight: bold; /* Torna o título em negrito */
+  padding: 0px; /* Remove qualquer padding do título */
+}
+
+/* Estilo para os títulos dentro de cada card */
+h1 {
+  font-size: 2rem; /* Define um tamanho de fonte menor para títulos dentro dos cards */
+  color: var(--primary-color); /* Utiliza uma variável CSS para a cor do título */
+}
+
+/* Estilo para a grade de cards dentro do menu */
+.card-grid {
+  display: grid; /* Utiliza grid layout para os cards */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Cria colunas que se ajustam automaticamente a partir de 200px */
+  gap: 10px; /* Define o espaçamento entre os cards */
+}
+
+/* Estilo para o contêiner de botões */
+.button-container {
+  display: flex; /* Utiliza flexbox para alinhar os botões */
+  justify-content: center; /* Alinha os botões horizontalmente no centro */
+  align-items: center; /* Alinha os botões verticalmente no centro */
+  margin-top: 20px; /* Adiciona um espaçamento acima do grupo de botões */
+  margin-bottom: 80px; /* Adiciona um espaçamento abaixo do grupo de botões */
+}
+
+/* Estilo para os botões dentro do contêiner */
+.button-container app-button {
+  cursor: pointer; /* Adiciona o cursor em forma de ponteiro quando passar o mouse sobre o botão */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo do botão */
+}
+
+/* Estilo para o botão quando estiver sendo hover (passado o mouse) */
+.button-container app-button:hover {
+  background-color: #ed0000; /* Altera o fundo para vermelho quando o mouse passa sobre o botão */
+  color: #fff; /* Altera a cor do texto para branco */
+}

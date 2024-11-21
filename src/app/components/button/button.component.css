@@ -1,0 +1,87 @@
+/* Estilo básico para todos os botões */
+button {
+  padding: 10px 20px; /* Espaçamento interno (padding) do botão */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 1rem; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor como ponteiro ao passar o mouse sobre o botão */
+}
+
+/* Estilo para o botão primário */
+button.primary {
+  background-color: #ED1B00; /* Cor de fundo vermelha */
+  color: white; /* Cor do texto em branco */
+  border: 2px solid #ED1B00; /* Borda vermelha */
+  width: 150px; /* Largura fixa do botão */
+  height: 40px; /* Altura fixa do botão */
+  padding: 10px; /* Espaçamento interno (padding) */
+  text-align: center; /* Alinhamento do texto ao centro */
+  cursor: pointer; /* Cursor como ponteiro */
+  font-size: 16px; /* Tamanho da fonte */
+  display: inline-block; /* Faz o botão se comportar como um bloco, mas em linha */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Efeito suave para alteração da cor de fundo */
+}
+
+/* Estilo para o botão secundário */
+button.secondary {
+  background-color: transparent; /* Fundo transparente */
+  color: #ED1B00; /* Cor do texto vermelha */
+  border: 2px solid #ED1B00; /* Borda vermelha */
+  width: 150px; /* Largura fixa do botão */
+  height: 40px; /* Altura fixa do botão */
+  padding: 10px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento do texto */
+  cursor: pointer; /* Cursor como ponteiro */
+  font-size: 16px; /* Tamanho da fonte */
+  display: inline-block; /* Exibição em linha */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Efeito suave para alteração da cor de fundo */
+}
+
+/* Estilo para o botão terciário */
+button.tertiary {
+  background-color: #ED1B00; /* Cor de fundo vermelha */
+  color: white; /* Cor do texto em branco */
+  border: 2px solid #ED1B00; /* Borda vermelha */
+  width: 300px; /* Largura fixa maior que os outros botões */
+  height: 60px; /* Altura maior */
+  font-size: 17px; /* Tamanho da fonte */
+  display: inline-block; /* Exibição em linha */
+  border-radius: 8px; /* Bordas arredondadas mais suaves */
+  transition: background-color 0.3s ease; /* Efeito suave para alteração da cor de fundo */
+  font-family: 'Inter', sans-serif; /* Fonte específica */
+}
+
+/* Estilo para o botão quarter (quarto botão) */
+button.quarter {
+  background-color: #ED1B00; /* Cor de fundo vermelha */
+  color: white; /* Cor do texto em branco */
+  border: 2px solid #ED1B00; /* Borda vermelha */
+  width: 226px; /* Largura fixa do botão */
+  height: 64px; /* Altura maior */
+  padding: 10px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento do texto */
+  cursor: pointer; /* Cursor como ponteiro */
+  font-size: 16px; /* Tamanho da fonte */
+  display: inline-block; /* Exibição em linha */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Efeito suave para alteração da cor de fundo */
+  font-weight: bold; /* Texto em negrito */
+}
+
+/* Efeitos de hover para cada tipo de botão */
+button.primary:hover {
+  background-color: darkred; /* Cor de fundo ao passar o mouse (escuro) */
+}
+
+button.secondary:hover {
+  background-color: #f0f0f0; /* Cor de fundo ao passar o mouse (cinza claro) */
+}
+
+button.tertiary:hover {
+  background-color: #9e2a2a; /* Cor de fundo ao passar o mouse (tom mais escuro de vermelho) */
+}
+
+button.quarter:hover {
+  background-color: #d4c87a; /* Cor de fundo ao passar o mouse (amarelo dourado) */
+}

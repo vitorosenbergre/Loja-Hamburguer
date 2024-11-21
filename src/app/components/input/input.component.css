@@ -1,0 +1,90 @@
+/* Container geral para os campos de input */
+.input-container {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    gap: 20px; /* Espaço entre cada linha de input */
+    width: 80%; /* Define a largura do container */
+    max-width: 800px; /* Limita a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 20px; /* Espaço interno do container */
+    border: 1px solid #A5A4A4; /* Borda ao redor do container */
+    border-radius: 8px; /* Borda arredondada */
+    margin-top: 50px; /* Espaço superior */
+}
+
+/* Linha de inputs para mantê-los lado a lado */
+.input-row {
+    display: flex;
+    justify-content: space-between; /* Faz os inputs ficarem lado a lado */
+    gap: 20px; /* Espaço entre as colunas de inputs */
+}
+
+/* Grupo de inputs com label acima */
+.input-group {
+    display: flex;
+    flex-direction: column; /* Alinha o label acima do input */
+    width: 48%; /* Largura dos inputs, para que fiquem lado a lado */
+    position: relative; /* Permite que a suggestions-box seja posicionada corretamente em relação ao input */
+}
+
+/* Estilo para os labels dos inputs */
+label {
+    margin-bottom: 5px; /* Espaçamento entre o label e o input */
+}
+
+/* Estilo dos inputs */
+input {
+    padding: 8px;
+    font-size: 1rem;
+    width: 100%; /* Faz o input ocupar toda a largura disponível dentro da coluna */
+    box-sizing: border-box; /* Garante que o padding não afete a largura */
+}
+
+/* Estilo do textarea */
+textarea {
+    padding: 8px;
+    font-size: 1rem;
+    width: 800px; /* Faz o textarea ocupar toda a largura disponível */
+    height: 100px; /* Define a altura do textarea */
+    box-sizing: border-box; /* Garante que o padding não afete a largura */
+    resize: vertical; /* Permite redimensionamento vertical do textarea */
+}
+
+/* Definindo a fonte para inputs e textarea */
+input, textarea {
+    font-family: 'Inter', sans-serif; /* Fonte Inter */
+}
+
+/* Estilo da suggestions-box, que aparece abaixo do input */
+.suggestions-box {
+    position: absolute; /* Posiciona a box em relação ao input */
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 10;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra da caixa */
+    margin-top: 5px; /* Ajuste o valor para aumentar ou diminuir o espaçamento abaixo do input */
+    max-height: 150px;
+    overflow-y: auto; /* Permite rolar a lista se exceder a altura máxima */
+    width: 100%;  /* Ajusta a largura da suggestions-box para ser igual ao input */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+    max-width: 100%; /* Limita a caixa ao tamanho máximo do input */
+}
+
+/* Estilo para as opções dentro da suggestions-box */
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer; /* O cursor fica como uma mãozinha quando passa sobre as opções */
+}
+
+/* Estilo para quando uma opção é hover */
+.suggestion-item:hover {
+    background-color: #f0f0f0; /* Altera a cor de fundo quando o mouse passa sobre */
+}
+
+/* Container do botão de finalizar, centralizado */
+.finalize-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 40px; /* Espaço inferior */
+}

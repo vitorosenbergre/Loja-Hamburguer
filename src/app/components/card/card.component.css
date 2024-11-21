@@ -1,0 +1,41 @@
+.card {
+  border: 1px solid #ddd; /* Borda padrão */
+  border-radius: 8px; /* Arredonda os cantos */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do card */
+  text-align: center; /* Alinha o conteúdo centralizado */
+  transition: transform 0.3s, border-color 0.3s; /* Adiciona animações suaves para mudanças no tamanho e cor da borda */
+  max-width: 300px; /* Limita a largura máxima do card */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho do card quando o mouse passa por cima */
+  border-color: #ED0000; /* Muda a cor da borda para vermelha no hover */
+}
+
+.card img {
+  width: 100%; /* A imagem ocupa toda a largura do card */
+  max-width: 150px; /* Limita a largura da imagem */
+  padding-top: 30px; /* Adiciona um espaçamento no topo da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 0; /* Remove a margem inferior da imagem */
+}
+
+.card-image {
+  width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.card-content {
+  padding: 10px; /* Adiciona um espaçamento interno ao conteúdo do card */
+}
+
+.card-content h3 {
+  margin: 10px 0; /* Adiciona margens ao redor do título */
+  font-size: 1.2rem; /* Define o tamanho da fonte do título */
+  color: #333; /* Define a cor do texto do título */
+}
+
+.card-content p {
+  font-size: 0.9rem; /* Define o tamanho da fonte do parágrafo */
+  color: #666; /* Define a cor do texto do parágrafo */
+}

@@ -1,0 +1,27 @@
+.home-container {
+  text-align: center;  /* Centraliza o conteúdo horizontalmente */
+  background-color: #fff;  /* Define o fundo branco para a seção */
+  padding: 20px;  /* Adiciona 20px de padding ao redor do conteúdo */
+}
+
+.burger-image {
+  position: relative;  /* Permite o uso de posicionamento absoluto dentro deste elemento */
+  margin-top: 30px;  /* Adiciona um espaço de 30px acima da imagem */
+}
+
+.burger-image img {
+  width: 100%;  /* Faz a imagem ocupar toda a largura disponível do seu contêiner */
+  max-width: 600px;  /* Limita a largura máxima da imagem a 600px */
+  height: auto;  /* Mantém a proporção da imagem ao redimensioná-la */
+}
+
+.button-group {
+  margin-top: 50px;  /* Adiciona 50px de espaço acima do grupo de botões */
+  display: flex;  /* Usa o modelo flexbox para o layout do grupo de botões */
+  justify-content: center;  /* Centraliza os botões horizontalmente */
+  gap: 20px;  /* Adiciona um espaço de 20px entre os botões */
+}
+
+app-button {
+  font-size: 1rem;  /* Define o tamanho da fonte dos botões */
+}

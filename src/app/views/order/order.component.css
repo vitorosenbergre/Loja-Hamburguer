@@ -1,0 +1,46 @@
+.menu-container {
+  display: grid; /* Define que o contêiner será um grid */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  /* Cria colunas responsivas com largura mínima de 250px e preenchimento automático para preencher o espaço disponível */
+  gap: 50px; /* Define o espaçamento entre os cards */
+  padding: 20px 200px; /* Adiciona 20px de padding superior e inferior e 200px nas laterais */
+  justify-content: center; /* Centraliza o conteúdo dentro do contêiner */
+  max-width: 1200px; /* Limita a largura máxima do contêiner */
+  margin: 0 auto; /* Centraliza o contêiner horizontalmente na página */
+}
+
+.menu-container app-card {
+  margin: 0; /* Remove margens automáticas ao redor dos cards */
+  padding: 0; /* Remove o padding interno nos cards */
+  width: 100%; /* Garante que o card ocupe toda a largura da coluna */
+  background-color: #ffffff; /* Define o fundo dos cards como branco */
+}
+
+.menu-title {
+  font-size: 45px; /* Define um tamanho grande para o título */
+  color: #ED0000; /* Define a cor do título (vermelho) */
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 40px; /* Define o espaçamento abaixo do título */
+  font-weight: bold; /* Torna o título em negrito */
+  padding: 0px; /* Remove qualquer padding no título */
+}
+
+h1 {
+  font-size: 2rem; /* Define o tamanho da fonte como 2rem para o título h1 */
+  color: var(--primary-color); /* Define a cor do texto com a variável de cor primária */
+}
+
+.card-grid {
+  display: grid; /* Define que a grade de cards será um grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  /* Cria colunas de tamanhos variáveis (mínimo 200px) e ajusta automaticamente o número de colunas */
+  gap: 10px; /* Define o espaçamento entre os cards na grade */
+}
+
+.button-container {
+  display: flex; /* Define que o contêiner do botão será flexível */
+  justify-content: center; /* Centraliza o botão horizontalmente */
+  align-items: center; /* Centraliza o botão verticalmente */
+  margin-top: 20px; /* Adiciona um espaçamento acima do contêiner do botão */
+  margin-bottom: 80px; /* Adiciona um espaçamento abaixo do contêiner do botão */
+}

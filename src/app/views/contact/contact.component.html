@@ -1,0 +1,40 @@
+<app-header></app-header>  <!-- Inclui o componente de cabeçalho na página -->
+
+<!-- Container do formulário de contato -->
+<div class="contact-form">
+  <h2>Entre em contato</h2>  <!-- Título do formulário -->
+
+  <!-- Formulário que chama a função submitForm() ao ser enviado -->
+  <form (ngSubmit)="submitForm()">
+    
+    <!-- Campo de nome -->
+    <label for="name">Nome:</label>
+    <input id="name" [(ngModel)]="name" name="name" required type="text" />
+    <!-- [(ngModel)] cria um "two-way data binding" com a variável 'name' -->
+    <!-- 'required' garante que o campo não possa ser vazio -->
+    
+    <!-- Campo de e-mail -->
+    <label for="email">E-mail:</label>
+    <input id="email" [(ngModel)]="email" name="email" required type="email" />
+    <!-- 'type="email"' faz com que o campo aceite apenas e-mails válidos -->
+
+    <!-- Campo de telefone -->
+    <label for="phone">Telefone:</label>
+    <input id="phone" [(ngModel)]="phone" name="phone" required type="tel" />
+    <!-- 'type="tel"' define que o campo é para telefone -->
+
+    <!-- Campo de mensagem -->
+    <label for="message">Mensagem:</label>
+    <textarea id="message" [(ngModel)]="message" name="message" required></textarea>
+    <!-- 'textarea' permite uma entrada de múltiplas linhas -->
+
+    <!-- Botão de envio -->
+    <button type="submit">Enviar</button>
+    <!-- Ao ser clicado, o formulário é enviado e a função submitForm() é executada -->
+  </form>
+
+  <!-- Mensagem de feedback, que será alterada dependendo do estado do formulário -->
+  <div class="feedback-message" [ngClass]="{'success': feedbackMessage === 'Informações finalizadas, entraremos em contato.', 'error': feedbackMessage !== 'Informações finalizadas, entraremos em contato.'}">
+    <p>{{ feedbackMessage }}</p>  <!-- Exibe a mensagem de feedback, seja de sucesso ou erro -->
+  </div>
+</div>

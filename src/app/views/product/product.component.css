@@ -1,0 +1,43 @@
+/* Estilo para o título da categoria do menu */
+.menu-title {
+  font-size: 45px;              /* Define o tamanho da fonte do título */
+  color: #ED0000;               /* Define a cor do texto como vermelho escuro */
+  text-align: center;           /* Alinha o texto no centro */
+  margin-bottom: 10px;          /* Adiciona uma margem de 10px abaixo do título */
+  font-weight: bold;            /* Torna o texto em negrito */
+}
+
+/* Estilo para os itens de produto (hambúrgueres ou outros itens) */
+.product-item {
+  margin-bottom: 20px;          /* Adiciona uma margem inferior de 20px entre os itens */
+}
+
+/* Estilo para os campos de entrada (input) */
+input {
+  width: 100%;                  /* Define a largura do campo de entrada para ocupar toda a largura do seu container */
+  padding: 8px;                 /* Adiciona um preenchimento de 8px dentro do campo de entrada */
+  margin-top: 5px;              /* Adiciona uma margem superior de 5px */
+}
+
+/* Estilo para os botões */
+button {
+  width: 200px;                 /* Define a largura do botão para 200px */
+  height: 50px;                 /* Define a altura do botão para 50px */
+  background-color: #28a745;    /* Define a cor de fundo do botão para verde (tom claro) */
+  color: white;                 /* Define a cor do texto do botão como branco */
+  border: none;                 /* Remove a borda do botão */
+  border-radius: 5px;           /* Adiciona bordas arredondadas ao botão com raio de 5px */
+  cursor: pointer;             /* Altera o cursor para indicar que o botão é clicável */
+}
+
+/* Estilo para o botão quando o usuário passa o mouse sobre ele */
+button:hover {
+  background-color: #218838;    /* Altera a cor de fundo para um verde mais escuro quando o botão é hoverado */
+}
+
+/* Estilo para mensagens (como alertas ou erros) */
+.message {
+  margin-top: 20px;             /* Adiciona uma margem superior de 20px */
+  font-weight: bold;            /* Torna o texto da mensagem em negrito */
+  color: red;                   /* Define a cor do texto da mensagem como vermelho */
+}

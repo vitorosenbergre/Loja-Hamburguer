@@ -1,0 +1,58 @@
+/* Container geral do header */
+.header {
+  display: flex; /* Flexbox para alinhar os itens no header */
+  justify-content: space-between; /* Distribui o conteúdo com espaçamento entre os itens */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+  padding: 20px 40px; /* Espaçamento interno do header */
+  background-color: #fff; /* Cor de fundo branca */
+}
+
+/* Estilo da logo */
+.logo {
+  display: flex; /* Flexbox para a logo */
+  align-items: center; /* Alinha a logo e o texto verticalmente */
+  gap: 10px; /* Espaço entre a imagem e o texto */
+  padding-left: 40px; /* Distância da lateral esquerda */
+}
+
+.logo img {
+  width: auto; /* Ajusta a largura automaticamente */
+  height: 100%; /* Garante que a altura da imagem seja 100% do espaço disponível */
+}
+
+.logo span {
+  font-size: 24px; /* Tamanho da fonte do texto da logo */
+  font-weight: bold; /* Deixa o texto em negrito */
+  color: #000; /* Cor preta */
+}
+
+/* Estilo do menu de navegação */
+.nav {
+  padding-top: 1px; /* Pequeno espaçamento no topo */
+  padding-left: 0px; /* Remove a margem da lateral esquerda */
+  padding-right: 120px; /* Adiciona espaçamento à direita */
+}
+
+.nav ul {
+  list-style: none; /* Remove os marcadores das listas */
+  display: flex; /* Flexbox para os itens do menu */
+  gap: 30px; /* Espaço entre os itens do menu */
+  margin: 10px; /* Margem ao redor da lista */
+  font-size: 20px; /* Tamanho da fonte dos itens */
+  font-weight: 600; /* Peso seminegrito */
+  text-align: left; /* Alinha o texto à esquerda */
+  transition: background 0.3s ease, color 0.3s ease; /* Transições suaves para fundo e cor */
+  padding: 10px 15px; /* Padding para dar mais espaço aos itens */
+}
+
+.nav ul li a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #521D16; /* Cor do texto do link */
+  transition: color 0.3s; /* Transição suave para a cor do link */
+  line-height: 28px; /* Ajusta o espaçamento entre linhas */
+  font-family: 'Inter', sans-serif; /* Define a fonte Inter */
+}
+
+.nav ul li a:hover {
+  color: #e63946; /* Muda a cor para vermelho quando o link é hovered */
+}

@@ -1,0 +1,25 @@
+<!-- Componente de cabeçalho que provavelmente contém o título ou elementos de navegação do site -->
+<app-header></app-header>
+
+<!-- Exibe o título da categoria no menu. O valor da variável 'category' será interpolado e exibido no lugar da expressão -->
+<h1 class="menu-title">{{ category }}</h1>
+
+<!-- Container que envolve todos os itens do menu (hambúrgueres filtrados) -->
+<div class="menu-container">
+  <!-- Componente 'app-card' repetido para cada hambúrguer presente na lista 'filteredBurgers'.
+       Para cada hambúrguer, são passados os dados: título, descrição e imagem.
+       Além disso, ao clicar no cartão, a função 'navigateToDetail' é chamada, passando o hambúrguer selecionado -->
+  <app-card
+    *ngFor="let burger of filteredBurgers"
+    [title]="burger.title"           
+    [description]="burger.description" 
+    [imageUrl]="burger.image"         
+    (click)="navigateToDetail(burger)"> 
+  </app-card>
+</div>
+
+<!-- Container para um botão que provavelmente redireciona para uma página ou ação para visualizar o cardápio completo -->
+<div class="button-container">
+  <!-- Componente 'app-button' que exibe um botão do tipo 'tertiary', com o texto 'VER CARDÁPIO COMPLETO' -->
+  <app-button [buttonType]="'tertiary'">VER CARDÁPIO COMPLETO</app-button>
+</div>

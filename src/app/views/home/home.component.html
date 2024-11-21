@@ -1,0 +1,19 @@
+<app-header></app-header> <!-- Componente de cabeçalho, provavelmente exibe o logo ou o título da aplicação -->
+
+<div class="home-container"> <!-- Contêiner principal da página inicial -->
+  <div class="burger-image"> <!-- Seção da imagem do hambúrguer -->
+    <img src="assets/images/burgers.png" alt="Burgers" /> <!-- Exibe a imagem dos hambúrgueres -->
+  </div>
+
+  <div class="button-group"> <!-- Grupo de botões abaixo da imagem -->
+    <!-- Botão para navegar até a página de pedido -->
+    <app-button buttonType="primary" (click)="navigateTo('product')">
+      Fazer pedido
+    </app-button>
+    
+    <!-- Botão para navegar até a página do cardápio -->
+    <app-button buttonType="secondary" (click)="navigateTo('menu')">
+      Acessar cardápio
+    </app-button>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 # Hambúrgueria - Frontend Simplificado (Angular)
 
-Este é um projeto frontend simplificado desenvolvido em **Angular** para uma hambúrgueria. O objetivo é criar uma interface interativa onde os usuários podem navegar pelo cardápio, visualizar detalhes dos produtos, fazer pedidos e mais. O projeto simula um sistema básico de pedidos de hambúrgueres, com foco na navegação e usabilidade.
+Este é um projeto frontend simplificado desenvolvido em Angular para uma hambúrgueria. O objetivo é criar uma interface interativa onde os usuários podem navegar pelo cardápio, visualizar detalhes dos produtos, fazer pedidos e mais. O projeto já está integrado com a API criada para gerenciar os dados de produtos e pedidos. Você pode acessar o repositório da API pelo https://github.com/vitorosenbergre/loja-hamburguer-api.
 
 ## Funcionalidades
 
@@ -17,6 +17,7 @@ Este é um projeto frontend simplificado desenvolvido em **Angular** para uma ha
 
 - **Angular** (Framework para o desenvolvimento do frontend)
 - **Bootstrap** (Estilização e layout responsivo)
+- **API Backend** (A API foi criada com funcionalidades de gerenciamento de produtos e pedidos. O frontend já está integrado com ela para mostrar dados dinâmicos)
 
 ## Como Executar o Projeto
 
@@ -40,7 +41,6 @@ Este é um projeto frontend simplificado desenvolvido em **Angular** para uma ha
 
 ## Futuras Melhorias
 
-- Integração com Backend: Conectar o frontend a um servidor backend para gerenciar dados dinâmicos de hambúrgueres e pedidos.
 - Autenticação de Usuário: Implementar um sistema de login e registro para os usuários realizarem pedidos com conta personalizada.
 - Carrinho de Compras: Adicionar um sistema de carrinho para o usuário adicionar e remover itens antes de finalizar o pedido.
 - Responsividade Avançada: Melhorar o layout para dispositivos móveis e tablets, incluindo a implementação de um menu de navegação otimizado.
@@ -48,8 +48,8 @@ Este é um projeto frontend simplificado desenvolvido em **Angular** para uma ha
 
 ## Observações
 
-- O projeto pode ser expandido com integração de backend e funcionalidades adicionais.
-- Este é um exemplo de frontend e não está vinculado a um banco de dados real ou APIs externas.
+- O projeto já está integrado com uma API backend para fornecer dados dinâmicos de produtos e pedidos. Você pode acessar o código da API https://github.com/vitorosenbergre/loja-hamburguer-api.
+- Este projeto de frontend é um exemplo de integração com a API e pode ser expandido com funcionalidades adicionais, como autenticação e carrinho de compras.
 
 ## Visualização
 

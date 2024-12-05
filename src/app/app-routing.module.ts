@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'category', component: MenuComponent }, // Define a rota '/category' que carrega o componente MenuComponent
   { path: 'location', component: LocationComponent }, // Define a rota '/location' que carrega o componente LocationComponent
   { path: 'contact', component: ContactComponent}, // Define a rota '/contact' que carrega o componente ContactComponent
-  { path: 'order/:category', component: OrderComponent },  // Define a rota dinâmica '/order/:category' que carrega o componente OrderComponent, ':category' é um parâmetro de URL que pode ser acessado dentro do componente OrderComponent
+  { path: 'order/:categoryId', component: OrderComponent },  // Define a rota dinâmica '/order/:category' que carrega o componente OrderComponent, ':category' é um parâmetro de URL que pode ser acessado dentro do componente OrderComponent
   { path: 'detail/:title', component: DetailComponent },   // Define a rota dinâmica '/detail/:title' que carrega o componente DetailComponent, ':title' é um parâmetro de URL que pode ser acessado dentro do componente DetailComponent
   { path: 'product', component: ProductComponent },  // Define a rota '/product' que carrega o componente ProductComponent (repetido na lista de rotas)
   { path: 'end', component: EndComponent },   // Define a rota '/end' que carrega o componente EndComponent

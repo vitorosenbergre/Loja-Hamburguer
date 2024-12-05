@@ -1,0 +1,8 @@
+<!-- src/app/components/category-list/category-list.component.html -->
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+<ul>
+  <li *ngFor="let category of categories">
+    {{ category.name }}
+  </li>
+</ul>

@@ -19,11 +19,12 @@ import { EndComponent } from './views/end/end.component';
 import { LocationComponent } from './views/location/location.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { DescriptionComponent } from './components/description/description.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { CategoryListComponent } from './components/category-list/category-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
     HeaderComponent,
     ButtonComponent,
     CardComponent,
@@ -31,18 +32,20 @@ import { DescriptionComponent } from './components/description/description.compo
     HomeComponent,
     DetailComponent,
     MenuComponent,
-    OrderComponent,
     ProductComponent,
     EndComponent,
     LocationComponent,
     ContactComponent,
     DescriptionComponent,
+    CategoryListComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    FormsModule 
+    FormsModule,
+    HttpClientModule
   ],
   providers: [OrderService],
   bootstrap: [AppComponent]

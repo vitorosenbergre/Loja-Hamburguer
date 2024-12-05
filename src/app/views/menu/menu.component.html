@@ -1,37 +1,21 @@
 <app-header></app-header>
-<!-- Exibe o cabeçalho da página, provavelmente com o título ou logo do site -->
 
-<h1 class="menu-title">CATEGORIA</h1>
-<!-- Exibe o título "CATEGORIA" da página, indicando que esta seção é sobre categorias de produtos -->
+<h1 class="menu-title">CATEGORIAS</h1>
 
 <div class="menu-container">
-  <!-- Contêiner que envolve todos os cartões de categorias -->
-  
-  <!-- Exibe as categorias, utilizando a diretiva *ngFor para iterar sobre as categorias retornadas por getDisplayedCategories -->
   <app-card
     *ngFor="let category of getDisplayedCategories()" 
-    [title]="category.category" 
-    [description]="'Clique para ver os hambúrgueres'" 
-    [imageUrl]="'assets/images/hamburguer.png'" 
-    (click)="navigateToOrder(category.category)">
-    <!-- Para cada categoria, cria um cartão (app-card) com:
-         - title: recebe o nome da categoria (ex: X-Vegan, X-Fitness)
-         - description: uma descrição fixa que convida o usuário a clicar para ver os hambúrgueres
-         - imageUrl: caminho da imagem do hambúrguer
-         - (click): ao clicar, chama o método navigateToOrder com o nome da categoria como parâmetro -->
+    [title]="category.name" 
+    [description]="category.description" 
+    [imageUrl]="category.pathImage" 
+    (click)="navigateToOrder(category)">
   </app-card>
 </div>
 
 <div class="button-container">
-  <!-- Contêiner do botão para alternar a visualização das categorias -->
-  
   <app-button 
     [buttonType]="'tertiary'" 
     (click)="toggleCategories()">
-    <!-- Cria um botão com tipo 'terciário', que provavelmente tem um estilo de botão secundário -->
     {{ showAllCategories ? 'ESCONDER CATEGORIAS' : 'VER TODAS AS CATEGORIAS' }}
-    <!-- O texto do botão muda com base no valor de showAllCategories:
-         - Se showAllCategories for true, exibe 'ESCONDER CATEGORIAS'
-         - Se showAllCategories for false, exibe 'VER TODAS AS CATEGORIAS' -->
   </app-button>
 </div>

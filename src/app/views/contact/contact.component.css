@@ -4,7 +4,8 @@
   flex-direction: column;  /* Organiza os elementos do formulário em uma coluna */
   align-items: center;  /* Centraliza os itens ao longo do eixo transversal (horizontal) */
   gap: 20px;  /* Espaçamento entre os elementos dentro do formulário */
-  width: 400px;  /* Largura do formulário */
+  width: 90%;  /* Largura do formulário */
+  max-width: 400px;  /* Largura máxima do formulário */
   margin: 50px auto;  /* Centraliza o formulário na página com espaçamento superior e inferior */
   padding: 25px;  /* Espaçamento interno do formulário */
   background-color: #fff;  /* Cor de fundo do formulário */
@@ -22,7 +23,22 @@
 }
 
 button {
-  margin-left: 150px;  /* Alinha o botão à direita com um espaçamento à esquerda */
+  align-self: center;  /* Centraliza o botão */
+  padding: 12px 25px;  /* Espaçamento interno do botão */
+  background-color: #ED1B00;  /* Cor de fundo do botão */
+  color: white;  /* Cor do texto no botão */
+  border: none;  /* Remove a borda padrão */
+  border-radius: 5px;  /* Cantos arredondados no botão */
+  cursor: pointer;  /* Cursor de ponteiro ao passar o mouse sobre o botão */
+  font-size: 18px;  /* Tamanho da fonte do texto no botão */
+  font-weight: 600;  /* Deixa o texto do botão em negrito */
+  transition: background-color 0.3s ease;  /* Transição suave para a cor de fundo ao passar o mouse */
+  width: 100%;  /* Garante que o botão ocupe toda a largura disponível */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+  background-color: #ED1B00;  /* Altera a cor de fundo do botão quando o mouse passa sobre ele */
 }
 
 /* Estilo dos labels */
@@ -54,24 +70,6 @@ input:focus, textarea:focus {
   outline: none;  /* Remove o contorno padrão */
 }
 
-/* Estilo do botão */
-button {
-  padding: 12px 25px;  /* Espaçamento interno do botão */
-  background-color: #ED1B00;  /* Cor de fundo do botão */
-  color: white;  /* Cor do texto no botão */
-  border: none;  /* Remove a borda padrão */
-  border-radius: 5px;  /* Cantos arredondados no botão */
-  cursor: pointer;  /* Cursor de ponteiro ao passar o mouse sobre o botão */
-  font-size: 18px;  /* Tamanho da fonte do texto no botão */
-  font-weight: 600;  /* Deixa o texto do botão em negrito */
-  transition: background-color 0.3s ease;  /* Transição suave para a cor de fundo ao passar o mouse */
-}
-
-/* Efeito ao passar o mouse sobre o botão */
-button:hover {
-  background-color: #ED1B00;  /* Altera a cor de fundo do botão quando o mouse passa sobre ele */
-}
-
 /* Estilo da mensagem de feedback */
 .feedback-message {
   width: 100%;  /* A mensagem de feedback ocupa toda a largura do seu container */
@@ -97,4 +95,54 @@ button:hover {
 .feedback-message.error {
   background-color: #ED1B00;  /* Cor de fundo vermelha para erro */
   color: #fff;  /* Cor do texto branca */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .contact-form {
+    width: 90%;  /* Ajusta a largura para 90% da tela em dispositivos pequenos */
+    padding: 15px;  /* Reduz o padding para uma melhor adaptação */
+  }
+
+  .contact-form h2 {
+    font-size: 24px;  /* Reduz o tamanho da fonte do título */
+  }
+
+  .contact-form label {
+    font-size: 14px;  /* Diminui o tamanho da fonte do label */
+  }
+
+  input, textarea {
+    font-size: 14px;  /* Diminui o tamanho da fonte dos campos */
+  }
+
+  button {
+    padding: 12px 15px;  /* Ajusta o tamanho do botão */
+    font-size: 16px;  /* Reduz o tamanho da fonte no botão */
+  }
+}
+
+@media (max-width: 400px) {
+  /* Ajustes para telas muito pequenas (smartphones) */
+  .contact-form {
+    width: 90%;  /* Mantém a largura de 90% */
+    padding: 10px;  /* Reduz o padding ainda mais */
+  }
+
+  .contact-form h2 {
+    font-size: 20px;  /* Ajusta o tamanho do título */
+  }
+
+  .contact-form label {
+    font-size: 12px;  /* Ajusta o tamanho do label */
+  }
+
+  input, textarea {
+    font-size: 12px;  /* Ajusta o tamanho da fonte para campos de input e textarea */
+  }
+
+  button {
+    padding: 12px 10px;  /* Ajusta o tamanho do botão */
+    font-size: 14px;  /* Ajusta o tamanho da fonte no botão */
+  }
 }

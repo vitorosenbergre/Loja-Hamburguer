@@ -56,3 +56,71 @@
 .nav ul li a:hover {
   color: #e63946; /* Muda a cor para vermelho quando o link é hovered */
 }
+
+
+/* Media Queries para telas pequenas (mobile) */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px; /* Reduz o padding para telas menores */
+    flex-direction: column; /* Alinha logo e menu verticalmente */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .logo {
+    padding-left: 0; /* Remove o padding da esquerda na logo */
+    justify-content: center; /* Centraliza a logo */
+    margin-bottom: 15px; /* Espaço entre logo e menu */
+  }
+
+  .nav ul {
+    flex-direction: column; /* Organiza os itens do menu verticalmente */
+    gap: 15px; /* Aumenta o espaço entre os itens do menu */
+    padding: 0; /* Remove o padding lateral */
+  }
+
+  .nav ul li a {
+    font-size: 18px; /* Ajusta o tamanho da fonte */
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Centraliza os itens do menu */
+  .nav ul {
+    display: flex; /* Flexbox para os itens */
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    padding: 0; /* Remove o padding */
+    margin: 0; /* Remove a margem */
+  }
+
+  /* Ajuste no tamanho e estilo dos links */
+  .nav ul li a {
+    font-size: 14px; /* Diminui o tamanho da fonte */
+    text-align: center; /* Garante que o texto fique centralizado */
+    padding: 10px 15px; /* Espaço interno para os itens do menu */
+    width: 100%; /* Faz os itens ocuparem toda a largura disponível */
+    box-sizing: border-box; /* Ajusta o box model para o padding */
+  }
+
+  /* Ajusta a largura e altura da logo */
+  .logo img {
+    max-width: 100px; /* Reduz a largura da logo */
+    height: auto; /* Garante a proporção */
+  }
+
+  .header {
+    padding: 10px 15px; /* Reduz o padding para cabeçalhos em telas pequenas */
+    display: flex;
+    flex-direction: column; /* Empilha a logo e o menu */
+    align-items: center; /* Centraliza a logo e o menu */
+  }
+
+  /* Ajuste no comportamento da lista de links */
+  .nav ul li {
+    width: 100%; /* Faz com que cada item de menu ocupe toda a largura disponível */
+  }
+}
+
+

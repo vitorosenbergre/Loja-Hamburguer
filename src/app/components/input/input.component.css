@@ -17,6 +17,7 @@
     display: flex;
     justify-content: space-between; /* Faz os inputs ficarem lado a lado */
     gap: 20px; /* Espaço entre as colunas de inputs */
+    flex-wrap: wrap; /* Permite que os inputs se movam para a linha seguinte em telas pequenas */
 }
 
 /* Grupo de inputs com label acima */
@@ -33,7 +34,7 @@ label {
 }
 
 /* Estilo dos inputs */
-input {
+input, textarea {
     padding: 8px;
     font-size: 1rem;
     width: 100%; /* Faz o input ocupar toda a largura disponível dentro da coluna */
@@ -44,7 +45,7 @@ input {
 textarea {
     padding: 8px;
     font-size: 1rem;
-    width: 800px; /* Faz o textarea ocupar toda a largura disponível */
+    width: 100%; /* Garante que o textarea ocupe toda a largura disponível */
     height: 100px; /* Define a altura do textarea */
     box-sizing: border-box; /* Garante que o padding não afete a largura */
     resize: vertical; /* Permite redimensionamento vertical do textarea */
@@ -67,7 +68,6 @@ input, textarea {
     overflow-y: auto; /* Permite rolar a lista se exceder a altura máxima */
     width: 100%;  /* Ajusta a largura da suggestions-box para ser igual ao input */
     box-sizing: border-box; /* Garante que o padding não afete a largura total */
-    max-width: 100%; /* Limita a caixa ao tamanho máximo do input */
 }
 
 /* Estilo para as opções dentro da suggestions-box */
@@ -87,4 +87,31 @@ input, textarea {
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 40px; /* Espaço inferior */
+}
+
+/* Media query para telas pequenas */
+@media (max-width: 480px) {
+
+    .input-container{
+        max-width: 800px; /* Limita a largura máxima do container */
+        width: 100%;
+    }
+    /* Ajuste da largura e disposição dos campos */
+    .input-row {
+        flex-direction: column; /* Empilha os campos em vez de colocá-los lado a lado */
+    }
+
+    .input-group {
+        width: 100%; /* Garante que os inputs ocupem toda a largura disponível */
+    }
+
+    /* Ajustes para o tamanho dos inputs */
+    input, textarea {
+        font-size: 14px; /* Diminui o tamanho da fonte para telas pequenas */
+    }
+
+    /* Ajusta a altura do textarea em telas pequenas */
+    textarea {
+        height: 80px; /* Ajusta a altura para se adaptar melhor */
+    }
 }

@@ -1,7 +1,6 @@
 <div class="input-container">
   <!-- Primeira linha de inputs: Produto 1 e Quantidade -->
   <div class="input-row">
-    <!-- Campo de entrada para o Produto 1 -->
     <div class="input-group">
       <label for="produto">Produto*</label>
       <input 
@@ -13,30 +12,29 @@
         (blur)="onBlur('produto')"  
         placeholder="Digite o nome do produto" 
       />
-  
+
       <!-- Caixa de sugestões que aparece enquanto o usuário digita no campo 'produto' -->
-      <div *ngIf="showSuggestions['produto'] && filteredBurgers.length > 0" class="suggestions-box">
-        <!-- Exibe cada hambúrguer filtrado como sugestão -->
+      <div *ngIf="showSuggestions['produto'] && filteredProducts.length > 0" class="suggestions-box">
+        <!-- Exibe cada produto filtrado como sugestão -->
         <div 
-          *ngFor="let burger of filteredBurgers" 
-          (click)="selectBurger(burger, 'produto')"  
+          *ngFor="let product of filteredProducts" 
+          (click)="selectProduct(product, 'produto')"  
           class="suggestion-item"
         >
-          {{ burger.title }}  <!-- Exibe o título do hambúrguer -->
+          {{ product.name }}  <!-- Exibe o nome do produto -->
         </div>
       </div>
     </div>
-  
+
     <!-- Campo de entrada para a quantidade do Produto 1 -->
     <div class="input-group">
       <label for="quantidade">Quantidade*</label>
       <input type="number" id="quantidade" placeholder="Digite a quantidade" />
     </div>
   </div>
-  
+
   <!-- Segunda linha de inputs: Produto 2 e Quantidade -->
   <div class="input-row">
-    <!-- Campo de entrada para o Produto 2 -->
     <div class="input-group">
       <label for="produto2">Produto*</label>
       <input 
@@ -48,30 +46,28 @@
         (blur)="onBlur('produto2')"  
         placeholder="Digite o nome do produto" 
       />
-  
+
       <!-- Caixa de sugestões que aparece enquanto o usuário digita no campo 'produto2' -->
-      <div *ngIf="showSuggestions['produto2'] && filteredBurgers.length > 0" class="suggestions-box">
-        <!-- Exibe cada hambúrguer filtrado como sugestão -->
+      <div *ngIf="showSuggestions['produto2'] && filteredProducts.length > 0" class="suggestions-box">
         <div 
-          *ngFor="let burger of filteredBurgers" 
-          (click)="selectBurger(burger, 'produto2')"  
+          *ngFor="let product of filteredProducts" 
+          (click)="selectProduct(product, 'produto2')"  
           class="suggestion-item"
         >
-          {{ burger.title }}  <!-- Exibe o título do hambúrguer -->
+          {{ product.name }}  <!-- Exibe o nome do produto -->
         </div>
       </div>
     </div>
-  
+
     <!-- Campo de entrada para a quantidade do Produto 2 -->
     <div class="input-group">
       <label for="quantidade2">Quantidade*</label>
       <input type="number" id="quantidade2" placeholder="Digite a quantidade" />
     </div>
   </div>
-  
+
   <!-- Terceira linha de input: Observação -->
   <div class="input-row">
-    <!-- Campo de entrada para observações do pedido -->
     <div class="input-group">
       <label for="observacao">Observação*</label>
       <textarea id="observacao" placeholder="Digite suas observações" rows="3"></textarea>
@@ -81,6 +77,5 @@
 
 <!-- Botão para finalizar o pedido -->
 <div class="finalize-button-container">
-  <!-- Botão que chama a função finalizeOrder ao ser clicado -->
   <app-button [buttonType]="'quarter'" (click)="finalizeOrder()">FINALIZAR</app-button>
 </div>

@@ -139,3 +139,87 @@
   grid-column: 1 / span 2; /* Faz o botão ocupar as duas colunas do grid */
   width: 100%; /* Largura total do container */
 }
+
+/* Responsividade para telas pequenas (até 768px) */
+@media (max-width: 768px) {
+  .detail-container {
+    grid-template-columns: 1fr; /* Uma coluna */
+    gap: 20px; /* Maior espaçamento entre as seções */
+  }
+
+  .menu-title {
+    font-size: 28px; /* Tamanho reduzido para o título */
+  }
+
+  .burger-title {
+    font-size: 1.2rem; /* Tamanho reduzido para o título do burger */
+  }
+
+  .burger-price {
+    font-size: 22px; /* Tamanho reduzido para o preço */
+  }
+
+  .burger-description {
+    font-size: 0.95rem; /* Tamanho ajustado para a descrição */
+  }
+
+  .buy-button-container {
+    padding: 10px 0; /* Ajuste no padding do botão */
+  }
+}
+
+/* Responsividade para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+  .detail-container {
+    grid-template-columns: 1fr; /* Coluna única */
+    gap: 15px; /* Menor espaço entre as seções */
+  }
+
+  .menu-title {
+    font-size: 24px; /* Título ainda menor */
+  }
+
+  .burger-title {
+    font-size: 1rem; /* Título menor */
+  }
+
+  .burger-price {
+    font-size: 20px; /* Preço ainda menor */
+  }
+
+  .burger-description {
+    font-size: 0.85rem; /* Descrição ainda menor */
+  }
+
+  .card-left img {
+    width: 80%; /* Ajuste na largura das imagens */
+  }
+
+  .buy-button-container {
+    width: 100%; /* Botão ocupa a largura total */
+  }
+}
+
+/* Responsividade para telas grandes (a partir de 1200px) */
+@media (min-width: 1200px) {
+  .menu-title {
+    font-size: 50px; /* Título maior */
+  }
+
+  .burger-title {
+    font-size: 1.6rem; /* Tamanho maior para o título */
+  }
+
+  .burger-price {
+    font-size: 38px; /* Preço maior */
+  }
+
+  .burger-description {
+    font-size: 1.1rem; /* Descrição ajustada */
+  }
+
+  .card-left {
+    width: 300px; /* Card maior em telas grandes */
+    margin: 0 10px; /* Mais espaçamento entre os cards */
+  }
+}

@@ -1,20 +1,26 @@
+/* Container principal da home */
 .home-container {
   text-align: center;  /* Centraliza o conteúdo horizontalmente */
   background-color: #fff;  /* Define o fundo branco para a seção */
   padding: 20px;  /* Adiciona 20px de padding ao redor do conteúdo */
+  box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
 }
 
+/* Imagem do burger */
 .burger-image {
   position: relative;  /* Permite o uso de posicionamento absoluto dentro deste elemento */
   margin-top: 30px;  /* Adiciona um espaço de 30px acima da imagem */
 }
 
+/* Ajuste na imagem do burger */
 .burger-image img {
   width: 100%;  /* Faz a imagem ocupar toda a largura disponível do seu contêiner */
   max-width: 600px;  /* Limita a largura máxima da imagem a 600px */
   height: auto;  /* Mantém a proporção da imagem ao redimensioná-la */
+  margin: 0 auto;  /* Centraliza a imagem */
 }
 
+/* Grupo de botões */
 .button-group {
   margin-top: 50px;  /* Adiciona 50px de espaço acima do grupo de botões */
   display: flex;  /* Usa o modelo flexbox para o layout do grupo de botões */
@@ -22,6 +28,53 @@
   gap: 20px;  /* Adiciona um espaço de 20px entre os botões */
 }
 
+/* Estilo para os botões */
 app-button {
   font-size: 1rem;  /* Define o tamanho da fonte dos botões */
+}
+
+/* Responsividade para telas pequenas (até 768px) */
+@media (max-width: 768px) {
+  /* Ajusta o padding da home para telas pequenas */
+  .home-container {
+    padding: 10px;  /* Diminui o padding para otimizar o espaço em telas pequenas */
+  }
+
+  /* Ajusta a imagem do burger para se adaptar melhor a telas pequenas */
+  .burger-image img {
+    max-width: 100%;  /* Permite que a imagem ocupe toda a largura disponível */
+    margin-bottom: 20px;  /* Adiciona mais espaço abaixo da imagem */
+    width: 70%;
+  }
+
+  /* Ajusta o grupo de botões para telas pequenas */
+  .button-group {
+    flex-direction: column;  /* Alinha os botões verticalmente */
+    gap: 15px;  /* Diminui o espaço entre os botões */
+  }
+
+  /* Ajuste no tamanho da fonte dos botões */
+  app-button {
+    font-size: 0.9rem;  /* Diminui o tamanho da fonte dos botões */
+  }
+}
+
+/* Responsividade para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 5px;  /* Reduz o padding para otimizar o uso do espaço */
+  }
+
+  .burger-image img {
+    max-width: 70%;  /* Permite que a imagem ocupe toda a largura */
+  }
+
+  .button-group {
+    flex-direction: column;  /* Mantém os botões em coluna */
+    gap: 10px;  /* Espaço ainda menor entre os botões */
+  }
+
+  app-button {
+    font-size: 0.8rem;  /* Reduz ainda mais o tamanho da fonte */
+  }
 }

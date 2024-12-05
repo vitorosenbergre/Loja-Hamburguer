@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderService } from '../../services/order.service';
+import { CategoryService, Category, Product } from '../../services/category.service';
 import { Router } from '@angular/router';
-
-// Interface para definir a estrutura dos objetos hambúrgueres
-interface Burger {
-  title: string;
-  description: string;
-}
 
 @Component({
   selector: 'app-input',
@@ -14,41 +8,45 @@ interface Burger {
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-  burgers: Burger[] = []; // Lista de hambúrgueres disponíveis
-  filteredBurgers: Burger[] = [];  // Lista de hambúrgueres filtrados conforme o termo de busca
-  searchTerm: string = '';         // Termo de busca do usuário
-  showSuggestions: { [key: string]: boolean } = {}; // Controle para exibir ou não sugestões para cada input
-  selectedProduct: { [key: string]: string } = {};  // Armazena o hambúrguer selecionado em cada input
+  categories: Category[] = [];            // Lista de categorias
+  allProducts: Product[] = [];            // Todos os produtos das categorias
+  filteredProducts: Product[] = [];       // Lista de produtos filtrados conforme o termo de busca
+  searchTerm: string = '';                // Termo de busca do usuário
+  showSuggestions: { [key: string]: boolean } = {};  // Controle para exibir ou não sugestões para cada input
+  selectedProduct: { [key: string]: string } = {};   // Armazena o produto selecionado em cada input
 
-  constructor(private orderService: OrderService, private router: Router) {}
+  constructor(private categoryService: CategoryService, private router: Router) {}
 
   ngOnInit(): void {
-    // No início, pega todos os hambúrgueres disponíveis através do serviço
-    this.burgers = this.orderService.getBurgers();
+    // Carregar categorias e produtos ao iniciar
+    this.categoryService.getCategories().subscribe((categories: Category[]) => {
+      this.categories = categories;
+      // Agregar todos os produtos de todas as categorias
+      this.allProducts = categories.flatMap(category => category.products);
+    });
   }
 
-  // Método que filtra os hambúrgueres com base no termo de pesquisa
+  // Método que filtra os produtos com base no termo de pesquisa
   onSearchTermChange(inputId: string): void {
-    // Se houver um produto selecionado, filtra os hambúrgueres conforme o termo de pesquisa
     if (this.selectedProduct[inputId]) {
-      this.filteredBurgers = this.burgers
-        .filter(burger => burger.title.toLowerCase().includes(this.selectedProduct[inputId].toLowerCase()));
+      this.filteredProducts = this.allProducts.filter(product =>
+        product.name.toLowerCase().includes(this.selectedProduct[inputId].toLowerCase())
+      );
     } else {
-      // Se não houver seleção, esconde as sugestões
-      this.filteredBurgers = [];
+      this.filteredProducts = [];
     }
   }
 
   // Exibe as sugestões quando o campo de input é focado
   onFocus(inputId: string): void {
-    this.showSuggestions[inputId] = true; // Exibe sugestões para o input atual
-    this.filteredBurgers = this.burgers;   // Exibe todos os hambúrgueres quando o campo for clicado
+    this.showSuggestions[inputId] = true;      // Exibe sugestões para o input atual
+    this.filteredProducts = this.allProducts;  // Exibe todos os produtos quando o campo for clicado
   }
 
-  // Método para selecionar um hambúrguer a partir da sugestão
-  selectBurger(burger: Burger, inputId: string): void {
-    this.selectedProduct[inputId] = burger.title; // Atualiza o input com o nome do hambúrguer selecionado
-    this.showSuggestions[inputId] = false;        // Esconde as sugestões após a seleção
+  // Método para selecionar um produto a partir da sugestão
+  selectProduct(product: Product, inputId: string): void {
+    this.selectedProduct[inputId] = product.name;  // Atualiza o input com o nome do produto selecionado
+    this.showSuggestions[inputId] = false;         // Esconde as sugestões após a seleção
   }
 
   // Método para esconder as sugestões quando o usuário sai do campo de input

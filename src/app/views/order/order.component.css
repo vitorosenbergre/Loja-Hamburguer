@@ -44,3 +44,56 @@ h1 {
   margin-top: 20px; /* Adiciona um espaçamento acima do contêiner do botão */
   margin-bottom: 80px; /* Adiciona um espaçamento abaixo do contêiner do botão */
 }
+
+
+/* Responsividade para telas menores de 720px */
+@media (max-width: 720px) {
+  .menu-container {
+    grid-template-columns: 1fr; /* Empilha os cards em uma coluna única */
+    padding: 20px; /* Reduz o padding para 20px */
+  }
+
+  .menu-title {
+    font-size: 36px; /* Reduz o tamanho da fonte do título */
+  }
+
+  .button-container {
+    flex-direction: column; /* Organiza os botões verticalmente */
+    margin-bottom: 40px; /* Reduz o espaço entre os botões */
+  }
+
+  .button-container app-button {
+    width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+    margin-bottom: 10px; /* Adiciona espaço entre os botões */
+  }
+}
+
+/* Responsividade para telas menores de 480px */
+@media (max-width: 480px) {
+  .menu-container {
+    grid-template-columns: 1fr; /* Empilha os cards em uma coluna única */
+    padding: 10px; /* Reduz ainda mais o padding lateral */
+    align-items: center; /* Centraliza a logo e o menu */
+    flex-direction: column; /* Empilha os itens verticalmente */
+  }
+
+  .menu-title {
+    font-size: 30px; /* Reduz o tamanho da fonte do título */
+    margin-bottom: 20px; /* Reduz o espaço abaixo do título */
+  }
+
+  .button-container {
+    flex-direction: column; /* Organiza os botões verticalmente */
+    margin-top: 10px; /* Reduz o espaço acima dos botões */
+    margin-bottom: 40px; /* Reduz o espaço abaixo dos botões */
+  }
+
+  .button-container app-button {
+    width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+    margin-bottom: 10px; /* Adiciona espaço entre os botões */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Reduz o tamanho do título dentro dos cards */
+  }
+}

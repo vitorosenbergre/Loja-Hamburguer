@@ -30,9 +30,13 @@
 
     <!-- Container para o botão de compra -->
     <div class="buy-button-container">
-        <!-- Componente do botão de compra. O tipo de botão é passado como "quarter" e ao ser clicado, chama a função goToProductPage() -->
-        <app-button [buttonType]="'quarter'" (click)="goToProductPage()" class="primary">COMPRAR</app-button>
+      <!-- Aqui chamamos o método goToProductPage quando o botão é clicado -->
+      <app-button 
+        [buttonType]="'quarter'" 
+        class="primary" 
+        (click)="goToProductPage()">COMPRAR</app-button>
     </div>
+    
 
   </div>
 </div>

@@ -5,6 +5,7 @@
   width: 100%;  /* Define a largura total do contêiner */
   padding: 20px;  /* Adiciona espaçamento interno de 20px */
   background-color: #f9f9f9;  /* Define a cor de fundo do contêiner */
+  box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
 }
 
 /* Estilo para o conteúdo do local */
@@ -66,4 +67,62 @@
   display: flex;  /* Usa o modelo de layout flexbox */
   justify-content: center;  /* Alinha o conteúdo ao centro */
   margin-top: 30px;  /* Adiciona margem acima do mapa */
+}
+
+/* Responsividade para telas pequenas (até 768px) */
+@media (max-width: 768px) {
+  /* Ajusta a largura do contêiner */
+  .location-container {
+    padding: 15px;  /* Diminui o padding para otimizar o espaço em telas pequenas */
+  }
+
+  /* Ajusta o conteúdo para ficar melhor em telas menores */
+  .location-content {
+    padding: 15px;  /* Reduz o padding dentro do conteúdo */
+    margin: 0 10px;  /* Adiciona margem lateral para evitar que o conteúdo fique grudado nas bordas */
+  }
+
+  /* Ajusta o tamanho da fonte dos títulos */
+  .location-content h1,
+  .location-content h2 {
+    font-size: 28px;  /* Diminui o tamanho da fonte dos títulos */
+  }
+
+  /* Ajusta o tamanho da fonte do parágrafo */
+  .location-content p,
+  .location-message p {
+    font-size: 16px;  /* Diminui o tamanho da fonte dos parágrafos */
+  }
+
+  /* Ajusta a largura do mapa */
+  .map {
+    width: 100%;  /* Faz o mapa ocupar toda a largura disponível */
+    margin-top: 20px;  /* Ajusta o espaçamento do mapa */
+  }
+}
+
+/* Responsividade para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+  .location-container {
+    padding: 10px;  /* Diminui o padding para otimizar o uso do espaço */
+  }
+
+  .location-content {
+    padding: 10px;  /* Reduz o padding dentro do conteúdo */
+    margin: 0 5px;  /* Reduz a margem lateral */
+  }
+
+  .location-content h1,
+  .location-content h2 {
+    font-size: 24px;  /* Diminui ainda mais o tamanho da fonte dos títulos */
+  }
+
+  .location-content p,
+  .location-message p {
+    font-size: 14px;  /* Diminui ainda mais o tamanho da fonte dos parágrafos */
+  }
+
+  .map {
+    margin-top: 10px;  /* Diminui a margem acima do mapa */
+  }
 }

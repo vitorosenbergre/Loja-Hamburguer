@@ -17,13 +17,12 @@ Este é um projeto frontend simplificado desenvolvido em **Angular** para uma ha
 
 - **Angular** (Framework para o desenvolvimento do frontend)
 - **Bootstrap** (Estilização e layout responsivo)
-- **RxJS** (Gerenciamento de fluxo assíncrono de dados)
 
 ## Como Executar o Projeto
 
 1. **Clone o repositório:** Primeiro, clone este repositório para o seu ambiente local:
    ```bash
-   git clone https://github.com/seu-usuario/gestor-de-tarefas.git
+   git clone https://github.com/vitorosenbergre/Loja-Hamburguer
 
 2. **Navegar até o diretório do projeto:** Certifique-se de estar no reposítorio correto. Em seguida, execute:
     ```bash
